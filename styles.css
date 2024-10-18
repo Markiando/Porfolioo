@@ -1,0 +1,154 @@
+body {
+    background-color: #fdf1f1; /* Color de fondo sólido */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card-container-main {
+    background: rgba(255, 255, 255, 0.2); /* Color semi-transparente */
+    backdrop-filter: blur(30px); /* Efecto de desenfoque */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra */
+    text-align: center;
+    width: 1100px;
+    height: 600px;
+}
+
+header {
+    display: flex; /* mostrar los elementos en horizontal */
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+    font-family: sans-serif;
+    z-index: 100;
+    margin-right: 10px;
+}
+
+nav a {
+    font-weight: 600;
+    padding: 10px;
+    font-size: 20px;
+    align-items: end;
+    margin: 10px;
+    font-family: 'Poppins';
+    background: linear-gradient(90deg, rgba(255, 95, 95, 1) 21%, rgba(238, 179, 179, 1) 59%, rgba(222, 119, 210, 1) 200%);
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 8s linear infinite;
+    -webkit-background-clip: text; /* Para compatibilidad con navegadores webkit */
+    background-size: 200% 100%;
+}
+
+.text-container {
+    justify-content: flex-start;
+    align-items: end;
+    display: flex;
+    padding-left: 30px;
+    font-family: 'Poppins';
+    background: linear-gradient(90deg, rgba(255, 95, 95, 1) 21%, rgba(238, 179, 179, 1) 59%, rgba(222, 119, 210, 1) 200%);
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 8s linear infinite;
+    -webkit-background-clip: text; /* Para compatibilidad con navegadores webkit */
+    font-size: 40px;
+    margin-top: 10px;
+    background-size: 200% 100%; /* Asegura que el fondo sea lo suficientemente grande para moverse */
+    margin-left: 30px;
+}
+
+.icon {
+    display: flex;
+}
+
+.icon-img {
+    height: 90px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.text-about-me p {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    margin-right: 500px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Poppins';
+    background: linear-gradient(90deg, rgba(255, 95, 95, 1) 21%, rgba(238, 179, 179, 1) 59%, rgba(222, 119, 210, 1) 200%);
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 8s linear infinite;
+    -webkit-background-clip: text; /* Para compatibilidad con navegadores webkit */
+    background-size: 200% 100%; /* Asegura que el fondo sea lo suficientemente grande para moverse */
+}
+
+.image-main .img {
+    width: 500px;
+    height: auto;
+    transform: translate(320px, -390px);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .card-container-main {
+        width: 90%; /* Ajustar el ancho de la tarjeta */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+    .text-about-me p {
+        margin-right: 30px; /* Reducir margen en pantallas más pequeñas */
+        margin-left: 20px; /* Reducir margen en pantallas más pequeñas */
+        font-size: 30px; /* Reducir tamaño de fuente */
+    }
+    .text-container {
+        font-size: 30px; /* Reducir tamaño de fuente */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+    nav a {
+        font-size: 18px; /* Reducir tamaño de fuente */
+        margin: 5px; /* Ajustar márgenes */
+    }
+    .text-about-me p {
+        font-size: 24px; /* Reducir tamaño de fuente */
+        margin-right: 20px; /* Reducir márgenes */
+        margin-left: 10px; /* Reducir márgenes */
+    }
+    .text-container {
+        font-size: 24px; /* Reducir tamaño de fuente */
+    }
+    .icon-img {
+        height: 70px; /* Reducir el tamaño de las imágenes del ícono */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container-main {
+        padding: 10px; /* Ajustar el padding */
+    }
+    .text-about-me p {
+        font-size: 20px; /* Reducir aún más el tamaño de fuente */
+    }
+    .text-container {
+        font-size: 20px; /* Reducir aún más el tamaño de fuente */
+    }
+}
